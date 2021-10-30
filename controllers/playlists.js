@@ -1,12 +1,12 @@
 const Playlist = require("../models/playlists")
 
-exports.getPlaylist = (req,res)=>{
+exports.getPlaylist = async (req,res)=>{
     const pl = await Playlist.find()
     console.log(pl)
     res.json(pl)
 }
 
-exports.postAgregarPlaylist = (req,res)=>{
+exports.postAgregarPlaylist = async (req,res)=>{
     const playlist = new Playlist(req.body)
     try{
         await playlist.save()
@@ -31,7 +31,7 @@ exports.postActualizarPlaylist = (req,res)=>{
     }
 }
 
-exports.postBorrarPlaylist = (req,res)=>{
+exports.postBorrarPlaylist = async (req,res)=>{
     await Playlist.findByIdAndRemove(req.body)
     console.log("Playlist eliminada")
     res.send({operacion: "Realizada correctamente"})

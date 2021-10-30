@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 
 const Playlist = mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     titulo:{
         type: String,
         required: true
