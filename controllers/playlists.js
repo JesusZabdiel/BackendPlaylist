@@ -19,10 +19,10 @@ exports.postAgregarPlaylist = async (req,res)=>{
     }
 }
 
-exports.postActualizarPlaylist = (req,res)=>{
+exports.postActualizarPlaylist = async (req,res)=>{
     try{
-        //No se si este bien
-        Playlist.findOneAndUpdate(req.body.filtro,req.body.cambio)
+        await Playlist.findOneAndUpdate(req.body.filtro,req.body.cambio)
+        Playlist.save()
         console.log("Cambio registrado")
         res.send({operacion: "Realizada correctamente"})
     }catch(err){
