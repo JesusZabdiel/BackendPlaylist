@@ -10,6 +10,6 @@ const Playlist = mongoose.Schema({
         type: String,
         required: true
     }
-},{collection:'playlist'})
+},{collection:'Playlist'})
 
 module.exports = mongoose.model('Playlist',Playlist)
