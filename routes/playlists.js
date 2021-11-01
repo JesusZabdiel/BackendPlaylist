@@ -7,7 +7,4 @@ router.post('/actualizarPlaylists',plyController.postActualizarPlaylist)
 router.post('/borrarPlaylists',plyController.postBorrarPlaylist)
 
 
-
-
-
 module.exports = router

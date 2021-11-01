@@ -18,3 +18,19 @@ mongoose.connect('mongodb://user7:root@54.173.202.133:27017/base7?authSource=adm
     app.listen(8080,()=>console.log("Servidor en linea"))
 })
 .catch(err=>console.log(err))
+
+app.get('*', (req, res)=>{
+    res.sendStatus(404)
+  });
+
+app.post('*', (req, res)=>{
+    res.sendStatus(404)
+});
+
+app.put('*', (req, res) =>{
+    res.sendStatus(405)
+})
+
+app.delete('*' , (req, res)=>{
+    res.sendStatus(405)
+})
