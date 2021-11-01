@@ -12,10 +12,11 @@ This endpoint is used for show all playlists available.
 |TimeOutException|Server down|500|
 
 - response: HTTP STATUS 200
-## 
-## 
-##
-## 
+
+
+
+
+
 
 # 1.2 Add Playlists
 This endpoint is used for add a playlist.
@@ -44,10 +45,11 @@ This endpoint is used for add a playlist.
 |InvalidBodyException|La descripcion debe tener de 10 a 250 chars y el titulo debe tener de 5 a 50 chars|422|
 
 - response: Realizada correctamente. HTTP STATUS 200.
-## 
-## 
-##
-## 
+
+
+
+
+
 
 # 1.3 Update Playlists
 This endpoint is used for add a playlist.
@@ -84,10 +86,10 @@ This endpoint is used for add a playlist.
 
 - response: Realizada correctamente. HTTP STATUS 200.
 
-## 
-## 
-##
-## 
+
+
+
+
 
 # 1.4 Delete Playlists
 This endpoint is used for add a playlist.
